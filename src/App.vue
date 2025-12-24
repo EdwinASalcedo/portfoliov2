@@ -34,7 +34,7 @@
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle"></p>
       </div>
-      <CardGrid :items="projects" cardBg="primary"/>
+      <CardGrid :items="projects" cardBg="primary" :showIcon="true"/>
       </div>
     </section>
 
@@ -85,7 +85,7 @@ export default {
       experiences: [
         {
           title: 'iOS Software Engineer',
-          company: 'Lift Notes (personal project)',
+          company: 'Lift Notes (Personal Project)',
           date: 'September 2025 - Present',
           description: '• Designed, built, and published LiftLog, a weightlifting tracker app using SwiftUI and SwiftData \n• Released on the App Store, achieving 70+ downloads and ongoing user growth \n• Collected and integrated user feedback, releasing bug fixes and updates to enhance UX \n• Implemented data persistence and smooth, responsive animations using native SwiftUI \n• Utilized XCTest and XCUITest for unit testing'
         },
@@ -98,26 +98,68 @@ export default {
       ],
       projects: [
         {
+          title: 'Munch-in',
+          subtitle: 'iOS App',
+          date: 'Work In Progress',
+          description: 'Never have food FOMO again! Explore friend food recommendations on the map or leave reviews of your own',
+          tags: ['SwiftUI', 'MapKit', 'Firebase Database', 'Firebase Analytics', 'Firebase Storage',],
+          icon: '/src/assets/icons/github.svg',
+          link: 'https://github.com/EdwinASalcedo/MunchIn'
+        },
+        {
+          title: 'MoodJo',
+          subtitle: 'iOS App',
+          date: 'Work In Progress',
+          description: 'Record your daily mood along with a journal entry. Entries can include a picture, audio snippet, or text. View monthly and weekly mood summaries',
+          tags: ['SwiftUI', 'SwiftData', 'AVFoundation', 'Metal'],
+          icon: '/src/assets/icons/github.svg',
+          link: ''
+        },
+        {
           title: 'LiftNotes',
           subtitle: 'iOS App',
           date: '2025',
-          description: 'A comprehensive design system with 100+ components, documentation, and guidelines for building consistent user interfaces.',
-          tags: ['SwiftUI', 'SwiftData', 'Swift',]
+          description: 'An app to record your lifts in the gym. Stay on track and make gains! Allows for users to create workout templates, create exercises as needed, and view workout history',
+          tags: ['SwiftUI', 'SwiftData', 'Swift',],
+          icon: '/src/assets/icons/github.svg',
+          link: 'https://github.com/EdwinASalcedo/LiftLogSwiftData'
         },
         {
           title: 'A.I Chat App',
           subtitle: 'iOS App',
           date: '2025',
-          description: 'Built a modern e-commerce platform with advanced filtering, real-time inventory, and seamless checkout experience.',
-          tags: ['SwiftUI', 'Firebase Database', 'OpenAI API', 'RevenueCat', 'Firebase Analytics', 'Firebase Storage',]
+          description: 'Create your own avatars or use other user-made avatars to chat with! App built with MVVM architecture, uses OpenAI API for chat and image generation',
+          tags: ['SwiftUI', 'Firebase Database', 'OpenAI API', 'RevenueCat', 'Firebase Analytics', 'Firebase Storage',],
+          icon: '/src/assets/icons/github.svg',
+          link: 'https://github.com/EdwinASalcedo/AIChat'
         },
         {
-          title: 'Task Management App',
-          subtitle: 'Mobile & Web',
-          date: '2021',
-          description: 'Collaborative task management tool with real-time updates, team workspaces, and intelligent prioritization.',
-          tags: ['React', 'Firebase', 'Material-UI']
-        }
+          title: 'OpenGL',
+          subtitle: '3D Graphics Programming',
+          date: '2025',
+          description: 'Learned how to load models, implement lighting, toggle textures, and integrate camera controls',
+          tags: ['OpenGL', 'GLSL', 'C++'],
+          icon: '/src/assets/icons/github.svg',
+          link: 'https://github.com/EdwinASalcedo/OpenGLTextureToggler'
+        },
+        {
+          title: 'Toy Dash',
+          subtitle: 'Video Game',
+          date: '2025',
+          description: 'Help the toy robot get back to where it belongs. Made with Unity 3D. Group Project for DIG3878',
+          tags: ['Unity', 'Blender', 'C#', 'Github'],
+          icon: '/src/assets/icons/github.svg',
+          link: 'https://github.com/Viscerus/3878_GroupProject'
+        },
+        {
+          title: 'NeuroStock',
+          subtitle: 'Web',
+          date: '2024',
+          description: 'Stock prediction ML model using historical Yahoo Finance Data. Group Project with Brian Loc Dinh and Jereme Yang',
+          tags: ['Python', 'Flask', 'Sci-Kit Learn', 'Machine Learning', 'TensorFlow'],
+          icon: '/src/assets/icons/github.svg',
+          link: 'https://github.com/LocBDinh/NeuroStock-Forecast'
+        },
       ],
       education: [
         {
@@ -127,7 +169,7 @@ export default {
           description: 'Built my foundation of computer science theoritically and practically with a focus on software engineering'
         },
         {
-          title: 'Minor in Digital Arts & Sciences',
+          title: 'Digital Arts & Sciences Minor',
           subtitle: 'University of Florida',
           date: '2024 - 2025',
           description: 'Focused on game developement using Unity and collaborating with fellow artists and programmers'
@@ -141,7 +183,7 @@ export default {
           link: 'https://apps.apple.com/us/app/lift-notes-gym-tracker/id6753324391'
         },
         {
-          name: 'Taste & Tell (W.I.P)',
+          name: 'Munch-in (W.I.P)',
           description: 'Discover and review your favorite food spots!',
           icon: '/app_icons/xcode.png',
           link: ''

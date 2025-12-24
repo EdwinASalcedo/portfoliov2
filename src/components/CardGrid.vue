@@ -7,7 +7,19 @@
       :class="{ 'card-secondary': cardBg === 'secondary' }"
       :style="{ animationDelay: (index * 0.1) + 's' }"
     >
-      <h3 class="card-title">{{ item.title }}</h3>
+      <div class="card-header">
+        <h3 class="card-title">{{ item.title }}</h3>
+        <a
+          v-if="showIcon && item.link"
+          :href="item.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-icon-link"
+          :aria-label="`Link to ${item.title}`"
+        >
+          <img v-if="item.icon" :src="item.icon" alt="Link icon" width="20" height="20" />
+        </a>
+      </div>
       <p class="card-subtitle" v-if="item.subtitle">{{ item.subtitle }}</p>
       <p class="card-meta" v-if="item.date">{{ item.date }}</p>
       <p class="card-description">{{ item.description }}</p>
@@ -36,6 +48,10 @@ export default {
       type: String,
       default: 'primary',
       validator: (value) => ['primary', 'secondary'].includes(value)
+    },
+    showIcon: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -67,11 +83,35 @@ export default {
   box-shadow: 0 12px 24px var(--card-shadow);
 }
 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
 .card-title {
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 8px;
   letter-spacing: -0.01em;
+  flex: 1;
+}
+
+.card-icon-link {
+  color: var(--text-secondary);
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.card-icon-link:hover {
+  opacity: 1;
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .card-subtitle {
