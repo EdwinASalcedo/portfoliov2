@@ -48,6 +48,8 @@
       </div>
     </section>
 
+    <FooterSection name="Edwin Salcedo" email="edwin.a.salcedo02@gmail.com" />
+
   </div>
 </template>
 
@@ -57,6 +59,7 @@ import HeroSection from './components/HeroSection.vue'
 import TimelineComponent from './components/TimelineComponent.vue'
 import CardGrid from './components/CardGrid.vue'
 import FeaturedApps from './components/FeaturedApps.vue'
+import FooterSection from './components/FooterSection.vue'
 
 export default {
   name: 'App',
@@ -65,7 +68,8 @@ export default {
     HeroSection,
     TimelineComponent,
     CardGrid,
-    FeaturedApps
+    FeaturedApps,
+    FooterSection
   },
   data() {
     return {
