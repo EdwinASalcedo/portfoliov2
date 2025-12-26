@@ -103,7 +103,7 @@ export default {
           date: 'Work In Progress',
           description: 'Never have food FOMO again! Explore friend food recommendations on the map or leave reviews of your own',
           tags: ['SwiftUI', 'MapKit', 'Firebase Database, Analytics, Storage, Auth',],
-          icon: '/src/assets/icons/github.svg',
+          icon: '/icons/github.svg',
           link: 'https://github.com/EdwinASalcedo/MunchIn'
         },
         {
@@ -112,7 +112,7 @@ export default {
           date: 'Work In Progress',
           description: 'Record your daily mood along with a journal entry. Entries can include a picture, audio snippet, or text. View monthly and weekly mood summaries',
           tags: ['SwiftUI', 'SwiftData', 'AVFoundation', 'Metal'],
-          icon: '/src/assets/icons/github.svg',
+          icon: '/icons/github.svg',
           link: ''
         },
         {
@@ -121,7 +121,7 @@ export default {
           date: '2025',
           description: 'An app to record your lifts in the gym. Stay on track and make gains! Allows for users to create workout templates, create exercises as needed, and view workout history',
           tags: ['SwiftUI', 'SwiftData', 'Swift',],
-          icon: '/src/assets/icons/github.svg',
+          icon: '/icons/github.svg',
           link: 'https://github.com/EdwinASalcedo/LiftLogSwiftData'
         },
         {
@@ -130,7 +130,7 @@ export default {
           date: '2025',
           description: 'Create your own avatars or use other user-made avatars to chat with! App built with MVVM architecture, uses OpenAI API for chat and image generation',
           tags: ['SwiftUI', 'OpenAI API', 'RevenueCat', 'Firebase Database, Analytics, Storage, Auth',],
-          icon: '/src/assets/icons/github.svg',
+          icon: '/icons/github.svg',
           link: 'https://github.com/EdwinASalcedo/AIChat'
         },
         {
@@ -139,7 +139,7 @@ export default {
           date: '2025',
           description: 'Learned how to load models, implement lighting, toggle textures, and integrate camera controls',
           tags: ['OpenGL', 'GLSL', 'C++'],
-          icon: '/src/assets/icons/github.svg',
+          icon: '/icons/github.svg',
           link: 'https://github.com/EdwinASalcedo/OpenGLTextureToggler'
         },
         {
@@ -148,7 +148,7 @@ export default {
           date: '2025',
           description: 'Help the toy robot get back to where it belongs. Made with Unity 3D. Group Project for DIG3878',
           tags: ['Unity', 'Blender', 'C#', 'Github'],
-          icon: '/src/assets/icons/github.svg',
+          icon: '/icons/github.svg',
           link: 'https://github.com/Viscerus/3878_GroupProject'
         },
         {
@@ -157,7 +157,7 @@ export default {
           date: '2024',
           description: 'Stock prediction ML model using historical Yahoo Finance Data. Group Project with Brian Loc Dinh and Jereme Yang',
           tags: ['Python', 'Flask', 'Sci-Kit Learn', 'Machine Learning', 'TensorFlow'],
-          icon: '/src/assets/icons/github.svg',
+          icon: '/icons/github.svg',
           link: 'https://github.com/LocBDinh/NeuroStock-Forecast'
         },
       ],
