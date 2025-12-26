@@ -9,6 +9,7 @@
     >
       <div class="card-header">
         <h3 class="card-title">{{ item.title }}</h3>
+        <div class="social-links">
         <a
           v-if="showIcon && item.link"
           :href="item.link"
@@ -19,6 +20,7 @@
         >
           <img v-if="item.icon" :src="item.icon" alt="Link icon" width="20" height="20" />
         </a>
+        </div>
       </div>
       <p class="card-subtitle" v-if="item.subtitle">{{ item.subtitle }}</p>
       <p class="card-meta" v-if="item.date">{{ item.date }}</p>
@@ -139,6 +141,11 @@ export default {
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 16px;
+}
+
+.social-links img {
+  filter: var(--icon-filter);
+  transition: filter 0.3s ease;
 }
 
 .tag {

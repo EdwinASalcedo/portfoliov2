@@ -29,9 +29,9 @@
     </section>
 
     <section id="projects" class="section section-full" style="background: var(--bg-secondary);">
-      <div class="section-content">
+      <div class="section-content-wide">
       <div class="section-header">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Projects & Skills</h2>
         <p class="section-subtitle"></p>
       </div>
       <CardGrid :items="projects" cardBg="primary" :showIcon="true"/>
@@ -102,7 +102,7 @@ export default {
           subtitle: 'iOS App',
           date: 'Work In Progress',
           description: 'Never have food FOMO again! Explore friend food recommendations on the map or leave reviews of your own',
-          tags: ['SwiftUI', 'MapKit', 'Firebase Database', 'Firebase Analytics', 'Firebase Storage',],
+          tags: ['SwiftUI', 'MapKit', 'Firebase Database, Analytics, Storage, Auth',],
           icon: '/src/assets/icons/github.svg',
           link: 'https://github.com/EdwinASalcedo/MunchIn'
         },
@@ -129,7 +129,7 @@ export default {
           subtitle: 'iOS App',
           date: '2025',
           description: 'Create your own avatars or use other user-made avatars to chat with! App built with MVVM architecture, uses OpenAI API for chat and image generation',
-          tags: ['SwiftUI', 'Firebase Database', 'OpenAI API', 'RevenueCat', 'Firebase Analytics', 'Firebase Storage',],
+          tags: ['SwiftUI', 'OpenAI API', 'RevenueCat', 'Firebase Database, Analytics, Storage, Auth',],
           icon: '/src/assets/icons/github.svg',
           link: 'https://github.com/EdwinASalcedo/AIChat'
         },
@@ -212,3 +212,7 @@ export default {
   }
 }
 </script>
+
+<!-- 
+create basic footer with name and copyright
+-->
