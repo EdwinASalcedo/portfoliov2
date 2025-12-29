@@ -97,13 +97,8 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .profile-image {
-    width: 200px;
-    height: 200px;
-  }
-
   .profile-image-container {
-    top: -60px;
+    display: none;
   }
 }
 </style>

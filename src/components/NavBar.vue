@@ -148,8 +148,35 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .nav-content {
+    padding: 0 12px;
+  }
+
   .nav-links {
-    gap: 16px;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .social-links {
+    gap: 8px;
+  }
+
+  .social-links img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .theme-toggle {
+    font-size: 18px;
+    padding: 2px;
   }
 }
 </style>

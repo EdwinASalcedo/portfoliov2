@@ -72,15 +72,19 @@ export default {
   font-weight: 600;
   margin: 0 0 0.25rem 0;
   color: var(--text-primary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .app-subtitle {
   font-size: 0.875rem;
   color: var(--text-secondary);
   margin: 0 0 0.5rem 0;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .view-button {
