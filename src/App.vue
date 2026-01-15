@@ -113,7 +113,7 @@ export default {
         {
           title: 'MoodJo',
           subtitle: 'iOS App',
-          date: 'Work In Progress',
+          date: '2026',
           description: 'Record your daily mood along with a journal entry. Entries can include a picture, audio snippet, or text. View monthly and weekly mood summaries',
           tags: ['SwiftUI', 'SwiftData', 'AVFoundation', 'Metal'],
           icon: '/icons/github.svg',
@@ -193,10 +193,10 @@ export default {
           link: ''
         },
         {
-          name: 'MoodJo (W.I.P)',
+          name: 'MoodJo',
           description: 'Log your mood along with a journal entry.',
-          icon: '/app_icons/xcode.png',
-          link: ''
+          icon: '/app_icons/MoodJo_logo.png',
+          link: 'https://apps.apple.com/us/app/moodjo-mood-journal/id6757492437'
         },
       ]
     }
