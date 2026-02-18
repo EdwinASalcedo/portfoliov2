@@ -3,7 +3,8 @@
     <div class="nav-content">
       <ul class="nav-links">
         <li v-for="link in links" :key="link.name">
-          <a :href="link.href">{{ link.name }}</a>
+          <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.name }}</RouterLink>
+          <a v-else :href="link.href">{{ link.name }}</a>
         </li>
       </ul>
       <div class="nav-actions">

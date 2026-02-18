@@ -11,7 +11,7 @@
         :title="app.name"
         :subtitle="app.description"
         :to="app.link"
-        :external="true"
+        :external="app.external !== false"
       />
     </div>
   </div>
