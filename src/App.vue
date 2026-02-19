@@ -26,7 +26,7 @@ export default {
         { name: 'Experience', href: '/#experience' },
         { name: 'Projects', href: '/#projects' },
         { name: 'Education', href: '/#education' },
-        { name: "Word O' Mouth", href: '/wom' },
+        { name: "WOM", href: '/wom' },
       ],
     }
   },
