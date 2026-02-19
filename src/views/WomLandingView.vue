@@ -3,6 +3,7 @@
 
     <!-- Hero: screenshot left, text right -->
     <section class="hero">
+      <img src="/app_icons/WOM_logo.png" alt="" aria-hidden="true" class="hero-logo-bg" />
       <div class="hero-inner">
         <div class="hero-screenshot">
           <div class="fan-container">
@@ -70,10 +71,6 @@
         >
           Join the Beta on TestFlight
         </a>
-        <p class="testflight-note">
-          Have feedback? Reach out at
-          <a href="mailto:edwin.a.salcedo02@gmail.com">edwin.a.salcedo02@gmail.com</a>
-        </p>
       </div>
     </section>
 
@@ -99,18 +96,37 @@ export default {
 
 /* ── Hero ─────────────────────────────────────────── */
 .hero {
+  --hero-logo-size: 420px;
+  position: relative;
   min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 44px 60px;
   background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.hero-logo-bg {
+  position: absolute;
+  width: var(--hero-logo-size);
+  height: var(--hero-logo-size);
+  object-fit: contain;
+  /* right: 10%; */
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.15;
+  border-radius: 28%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 256px;
   align-items: center;
   max-width: 1000px;
   width: 100%;
