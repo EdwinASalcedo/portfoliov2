@@ -1,15 +1,14 @@
 <template>
-  <div class="timeline">
-    <div 
-      v-for="(item, index) in items" 
+  <div class="timeline relative pl-10">
+    <div
+      v-for="(item, index) in items"
       :key="index"
-      class="timeline-item fade-in"
-      :style="{ animationDelay: (index * 0.1) + 's' }"
+      class="timeline-item relative mb-12 pl-6"
     >
-      <h3 class="timeline-title">{{ item.title }}</h3>
-      <p class="timeline-subtitle">{{ item.company }}</p>
-      <p class="timeline-date">{{ item.date }}</p>
-      <p class="timeline-description">{{ item.description }}</p>
+      <h3 class="text-[24px] font-semibold mb-1 tracking-[-0.01em] text-neutral-900 dark:text-neutral-100">{{ item.title }}</h3>
+      <p class="text-[17px] text-neutral-500 dark:text-neutral-400 mb-1">{{ item.company }}</p>
+      <p class="text-[14px] text-neutral-500 dark:text-neutral-500 mb-3">{{ item.date }}</p>
+      <p class="text-[17px] leading-normal text-neutral-500 dark:text-neutral-500 whitespace-pre-line">{{ item.description }}</p>
     </div>
   </div>
 </template>
@@ -27,11 +26,7 @@ export default {
 </script>
 
 <style scoped>
-.timeline {
-  position: relative;
-  padding-left: 40px;
-}
-
+/* Vertical line */
 .timeline::before {
   content: '';
   position: absolute;
@@ -39,15 +34,14 @@ export default {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--border);
+  background-color: #e5e5e5; /* neutral-200 */
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 48px;
-  padding-left: 24px;
+.dark .timeline::before {
+  background-color: #262626; /* neutral-800 */
 }
 
+/* Dot per item */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -56,33 +50,13 @@ export default {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--accent);
-  border: 3px solid var(--bg-primary);
+  border-width: 3px;
+  border-style: solid;
+  background-color: #0071e3; /* accent */
+  border-color: white;
 }
 
-.timeline-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
-}
-
-.timeline-subtitle {
-  font-size: 17px;
-  color: var(--text-secondary);
-  margin-bottom: 4px;
-}
-
-.timeline-date {
-  font-size: 14px;
-  color: var(--text-tertiary);
-  margin-bottom: 12px;
-}
-
-.timeline-description {
-  font-size: 17px;
-  line-height: 1.5;
-  color: var(--text-tertiary);
-  white-space: pre-line;
+.dark .timeline-item::before {
+  border-color: black;
 }
 </style>

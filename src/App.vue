@@ -40,7 +40,7 @@ export default {
       this.applyTheme()
     },
     applyTheme() {
-      document.documentElement.setAttribute('data-theme', this.theme)
+      document.documentElement.classList.toggle('dark', this.theme === 'dark')
     }
   }
 }

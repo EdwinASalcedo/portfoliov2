@@ -2,43 +2,45 @@
   <div>
     <HeroSection :data="hero" id="about" />
 
-    <section id="apps" class="section section-full" style="background: var(--bg-secondary);">
-      <div class="section-content">
-      <div class="section-header">
-        <h2 class="section-title">Featured Apps</h2>
-        <p class="section-subtitle">Available on the App Store</p>
+    <!-- Featured Apps -->
+    <section id="apps" class="w-full py-20 scroll-mt-15 overflow-x-hidden bg-neutral-100 dark:bg-neutral-900 max-md:py-15">
+      <div class="max-w-245 mx-auto px-5.5 overflow-x-hidden max-md:px-4">
+        <div class="text-center mb-15 max-md:mb-10">
+          <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Featured Apps</h2>
+          <p class="text-[21px] text-neutral-500 dark:text-neutral-400 font-normal tracking-[-0.01em] max-md:text-[17px]">Available on the App Store</p>
+        </div>
+        <FeaturedApps :apps="featuredApps" />
       </div>
-      <FeaturedApps :apps="featuredApps" />
-    </div>
     </section>
 
-    <section id="experience" class="section">
-      <div class="section-content">
-        <div class="section-header">
-          <h2 class="section-title">Experience</h2>
-          <p class="section-subtitle"></p>
+    <!-- Experience -->
+    <section id="experience" class="w-full py-20 scroll-mt-15 bg-white dark:bg-black max-md:py-15">
+      <div class="max-w-245 mx-auto px-5.5 max-md:px-4">
+        <div class="text-center mb-15 max-md:mb-10">
+          <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Experience</h2>
         </div>
         <TimelineComponent :items="experiences" />
       </div>
     </section>
 
-    <section id="projects" class="section section-full" style="background: var(--bg-secondary);">
-      <div class="section-content-wide">
-      <div class="section-header">
-        <h2 class="section-title">Projects & Skills</h2>
-        <p class="section-subtitle"></p>
-      </div>
-      <CardGrid :items="projects" cardBg="primary" :showIcon="true"/>
+    <!-- Projects & Skills -->
+    <section id="projects" class="w-full py-20 scroll-mt-15 overflow-x-hidden bg-neutral-100 dark:bg-neutral-900 max-md:py-15">
+      <div class="max-w-350 mx-auto px-5.5 overflow-x-hidden max-md:max-w-245 max-md:px-4">
+        <div class="text-center mb-15 max-md:mb-10">
+          <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Projects & Skills</h2>
+        </div>
+        <CardGrid :items="projects" cardBg="primary" :showIcon="true" />
       </div>
     </section>
 
-    <section id="education" class="section">
-      <div class="section-content">
-        <div class="section-header">
-          <h2 class="section-title">Education</h2>
-          <p class="section-subtitle">GO GATORS!</p>
+    <!-- Education -->
+    <section id="education" class="w-full py-20 scroll-mt-15 bg-white dark:bg-black max-md:py-15">
+      <div class="max-w-245 mx-auto px-5.5 max-md:px-4">
+        <div class="text-center mb-15 max-md:mb-10">
+          <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Education</h2>
+          <p class="text-[21px] text-neutral-500 dark:text-neutral-400 font-normal tracking-[-0.01em] max-md:text-[17px]">GO GATORS!</p>
         </div>
-        <CardGrid :items="education" cardBg="secondary"/>
+        <CardGrid :items="education" cardBg="secondary" />
       </div>
     </section>
 
@@ -171,7 +173,7 @@ export default {
         },
         {
           name: 'Word O\' Mouth (JOIN THE BETA!)',
-          description: 'Discover and review your favorite food spots! See what your friends recommend!',
+          description: 'Discover and review your favorite food spots!',
           icon: '/app_icons/WOM_logo.png',
           link: '/wom',
           external: false
