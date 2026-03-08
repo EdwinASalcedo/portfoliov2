@@ -1,11 +1,10 @@
 <template>
-  <footer class="footer">
-    <div class="footer-content">
-      <!-- <p class="footer-name">{{ name }}</p> -->
-      <p class="footer-email">
-        <a :href="`mailto:${email}`">{{ email }}</a>
+  <footer class="bg-neutral-100 dark:bg-neutral-900 py-10 px-5.5 text-center border-t border-neutral-200 dark:border-neutral-800">
+    <div class="max-w-245 mx-auto">
+      <p class="text-[15px] mb-3">
+        <a :href="`mailto:${email}`" class="text-accent no-underline hover:opacity-80">{{ email }}</a>
       </p>
-      <p class="footer-copyright">© {{ currentYear }} {{ name }}. All rights reserved.</p>
+      <p class="text-[13px] text-neutral-500 dark:text-neutral-600">© {{ currentYear }} {{ name }}. All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -30,44 +29,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.footer {
-  background: var(--bg-secondary);
-  padding: 40px 22px;
-  text-align: center;
-  border-top: 1px solid var(--border);
-}
-
-.footer-content {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.footer-name {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-}
-
-.footer-email {
-  font-size: 15px;
-  margin-bottom: 12px;
-}
-
-.footer-email a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.footer-email a:hover {
-  opacity: 0.8;
-}
-
-.footer-copyright {
-  font-size: 13px;
-  color: var(--text-tertiary);
-}
-</style>

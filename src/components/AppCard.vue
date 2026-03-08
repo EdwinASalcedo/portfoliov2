@@ -1,11 +1,13 @@
 <template>
-  <div class="app-card">
-    <img :src="icon" :alt="title" class="app-icon" />
-
-    <div class="app-info">
-      <h4 class="app-title">{{ title }}</h4>
-      <p class="app-subtitle">{{ subtitle }}</p>
-      <button class="view-button" @click="handleClick">View</button>
+  <div class="flex items-center gap-4 p-4">
+    <img :src="icon" :alt="title" class="w-24 h-24 rounded-3xl shrink-0" />
+    <div class="flex-1 min-w-0">
+      <h4 class="text-base font-semibold mb-1 text-neutral-900 dark:text-neutral-100 wrap-break-word">{{ title }}</h4>
+      <p class="text-[14px] text-neutral-500 dark:text-neutral-400 mb-2 line-clamp-2">{{ subtitle }}</p>
+      <button
+        class="bg-[#007aff] text-white border-none rounded-full px-4 py-2 text-[14px] font-semibold cursor-pointer hover:bg-[#0051d5]"
+        @click="handleClick"
+      >View</button>
     </div>
   </div>
 </template>
@@ -46,60 +48,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.app-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.app-icon {
-  width: 96px;
-  height: 96x;
-  border-radius: 24px;
-  flex-shrink: 0;
-}
-
-.app-info {
-  flex: 1;
-  min-width: 0; /* Allows text to truncate */
-}
-
-.app-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.25rem 0;
-  color: var(--text-primary);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.app-subtitle {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin: 0 0 0.5rem 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.view-button {
-  background: #007aff;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.view-button:hover {
-  background: #0051d5;
-}
-</style>
