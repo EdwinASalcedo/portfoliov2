@@ -2,48 +2,63 @@
   <div>
     <HeroSection :data="hero" id="about" />
 
-    <!-- Featured Apps -->
-    <section id="apps" class="w-full py-20 scroll-mt-15 overflow-x-hidden bg-neutral-100 dark:bg-neutral-900 max-md:py-15">
-      <div class="max-w-245 mx-auto px-5.5 overflow-x-hidden max-md:px-4">
-        <div class="text-center mb-15 max-md:mb-10">
-          <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Featured Apps</h2>
-          <p class="text-[21px] text-neutral-500 dark:text-neutral-400 font-normal tracking-[-0.01em] max-md:text-[17px]">Available on the App Store</p>
-        </div>
-        <FeaturedApps :apps="featuredApps" />
-      </div>
-    </section>
+    <!-- Sections: full-width panels separated by gap (page bg shows through) -->
+    <div class="flex flex-col gap-3 max-md:gap-2">
 
-    <!-- Experience -->
-    <section id="experience" class="w-full py-20 scroll-mt-15 bg-white dark:bg-black max-md:py-15">
-      <div class="max-w-245 mx-auto px-5.5 max-md:px-4">
-        <div class="text-center mb-15 max-md:mb-10">
-          <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Experience</h2>
+      <!-- Featured Apps -->
+      <section id="apps" class="bg-apple-gray dark:bg-apple-charcoal py-20 scroll-mt-15 overflow-x-hidden max-md:py-15">
+        <div class="max-w-245 mx-auto px-5.5 overflow-x-hidden max-md:px-4">
+          <div class="text-center mb-15 max-md:mb-10">
+            <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Featured Apps</h2>
+            <p class="text-[21px] text-neutral-500 dark:text-neutral-400 font-normal tracking-[-0.01em] max-md:text-[17px]">Available on the App Store</p>
+          </div>
+          <FeaturedApps :apps="featuredApps" />
         </div>
-        <TimelineComponent :items="experiences" />
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects & Skills -->
-    <section id="projects" class="w-full py-20 scroll-mt-15 overflow-x-hidden bg-neutral-100 dark:bg-neutral-900 max-md:py-15">
-      <div class="max-w-350 mx-auto px-5.5 overflow-x-hidden max-md:max-w-245 max-md:px-4">
+      <!-- Experience + Education row -->
+      <div class="grid grid-cols-2 gap-3 max-md:grid-cols-1">
+
+        <!-- Experience -->
+        <section id="experience" class="bg-apple-gray dark:bg-apple-charcoal py-20 scroll-mt-15 max-md:py-15">
+          <div class="px-32 max-md:px-4">
+            <div class="mb-12 max-md:mb-8">
+              <h2 class="text-[48px] font-semibold tracking-[-0.015em] text-neutral-900 dark:text-white max-md:text-[36px] text-center">Experience</h2>
+            </div>
+            <TimelineComponent :items="experiences" :collapsible="true" />
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="relative overflow-hidden scroll-mt-15 py-24 max-md:py-16">
+          <img src="/screenshots/ufbg.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+          <div class="absolute inset-0 bg-linear-to-r from-black/90 via-black/80 to-transparent max-md:bg-black/70"></div>
+          <div class="relative z-10 px-12 max-md:px-8">
+            <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-8 text-white max-md:text-[36px] text-center">Education</h2>
+            <div class="flex flex-col gap-8">
+              <div v-for="(item, index) in education" :key="index">
+                <h3 class="text-[28px] font-semibold tracking-[-0.01em] text-white mb-1">{{ item.title }}</h3>
+                <p class="text-[19px] text-neutral-100 mb-1">{{ item.company }}</p>
+                <p class="text-[15px] text-neutral-100 mb-3">{{ item.date }}</p>
+                <p class="text-[18px] leading-normal text-neutral-100">{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Projects & Skills -->
+      <section id="projects" class="bg-apple-gray dark:bg-apple-charcoal py-20 scroll-mt-15 max-md:py-15">
         <div class="text-center mb-15 max-md:mb-10">
           <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Projects & Skills</h2>
         </div>
-        <CardGrid :items="projects" cardBg="primary" :showIcon="true" />
-      </div>
-    </section>
+        <ProjectCarousel :items="projects" />
+      </section>
 
-    <!-- Education -->
-    <section id="education" class="w-full py-20 scroll-mt-15 bg-white dark:bg-black max-md:py-15">
-      <div class="max-w-245 mx-auto px-5.5 max-md:px-4">
-        <div class="text-center mb-15 max-md:mb-10">
-          <h2 class="text-[48px] font-semibold tracking-[-0.015em] mb-3 text-neutral-900 dark:text-neutral-100 max-md:text-[36px]">Education</h2>
-          <p class="text-[21px] text-neutral-500 dark:text-neutral-400 font-normal tracking-[-0.01em] max-md:text-[17px]">GO GATORS!</p>
-        </div>
-        <CardGrid :items="education" cardBg="secondary" />
-      </div>
-    </section>
+    </div>
 
+    <!-- Footer: flush to all edges, no gap -->
     <FooterSection name="Edwin Salcedo" email="edwin.a.salcedo02@gmail.com" />
   </div>
 </template>
@@ -51,7 +66,7 @@
 <script>
 import HeroSection from '@/components/HeroSection.vue'
 import TimelineComponent from '@/components/TimelineComponent.vue'
-import CardGrid from '@/components/CardGrid.vue'
+import ProjectCarousel from '@/components/ProjectCarousel.vue'
 import FeaturedApps from '@/components/FeaturedApps.vue'
 import FooterSection from '@/components/FooterSection.vue'
 
@@ -60,7 +75,7 @@ export default {
   components: {
     HeroSection,
     TimelineComponent,
-    CardGrid,
+    ProjectCarousel,
     FeaturedApps,
     FooterSection
   },
@@ -76,12 +91,16 @@ export default {
           title: 'iOS Software Engineer',
           company: 'Word O\' Mouth (Founder)',
           date: 'January 2026 - Present',
+          logo: '/app_icons/WOM_logo.png',
+          logoClass: 'rounded-[14px]',
           description: '• Architected and launched a social food discovery app from scratch, enabling users to share food reviews and locations (MapKit) with followers through a personalized feed \n• Selected Supabase over Firebase for backend infrastructure, leveraging PostgreSQL RLS policies and triggers to automate data syncing, reducing client-side code by 30% \n• Leading beta releases via TestFlight to 20+ users, collecting feedback to prioritize waht features to ship \n• Utilizing Swift concurrency (async/await) to handle Supabase Auth, Storage, and Database'
         },
         {
           title: 'GIS Data Scientist Intern',
           company: 'UF IFAS Ecosystem Services A.I Lab',
           date: 'May 2024 - September 2024',
+          logo: '/icons/UF_Monogram.svg',
+          logoClass: '',
           description: '• Built python scripts using Google Earth Engine, OpenStreetMap, GeoPandas, and geemap to extract, filter, and visualize Florida geospatial data for AI model training\n• Documented the data pipeline and script usage, writing clear setup and usage instructions for future lab members to reproduce and build upon the work\n• Presented findings through a technical slideshow, contributing to the professor\'s conference presentation, which spurred external interest and new research partnerships\n• Researched data collection methodologies in the early project phase, analyzing academic literature to design an effective approach to satellite imagery labeling for AI modeling'
         },
       ],
@@ -153,13 +172,13 @@ export default {
       education: [
         {
           title: 'Computer Science, B.S.',
-          subtitle: 'University of Florida',
+          company: 'University of Florida',
           date: '2021 - 2025',
           description: 'Built my foundation of computer science theoritically and practically with a focus on software engineering'
         },
         {
           title: 'Digital Arts & Sciences Minor',
-          subtitle: 'University of Florida',
+          company: 'University of Florida',
           date: '2024 - 2025',
           description: 'Focused on game developement using Unity and collaborating with fellow artists and programmers'
         }

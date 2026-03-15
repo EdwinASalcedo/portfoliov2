@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-neutral-100 dark:bg-neutral-900 py-10 px-5.5 text-center border-t border-neutral-200 dark:border-neutral-800">
+  <footer class="bg-apple-gray dark:bg-apple-raised py-10 px-5.5 text-center">
     <div class="max-w-245 mx-auto">
       <p class="text-[15px] mb-3">
         <a :href="`mailto:${email}`" class="text-accent no-underline hover:opacity-80">{{ email }}</a>

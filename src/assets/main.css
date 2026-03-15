@@ -5,11 +5,16 @@
 
 /* ── Brand tokens ───────────────────────────────────── */
 @theme {
-  --color-brand-orange: #fc5e25;
-  --color-brand-orange-muted: #ea764b;
   --color-accent: #0071e3;
   --color-accent-hover: #0077ed;
   --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+
+  /* Apple surface colors */
+  /* Light: white (#fff) ↔ light gray (#f5f5f7) */
+  /* Dark:  black (#000) ↔ charcoal (#1d1d1f) ↔ raised card (#2d2d2f) */
+  --color-apple-gray: #f5f5f7;
+  --color-apple-charcoal: #0f0f0f;
+  --color-apple-raised: #19191b;
 }
 
 /* ── Base ───────────────────────────────────────────── */
@@ -20,13 +25,4 @@ html {
 body {
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
-}
-
-
-/* ── Gradient text utility ──────────────────────────── */
-.gradient-text {
-  background: linear-gradient(135deg, #fc5e25 0%, #ea764b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }

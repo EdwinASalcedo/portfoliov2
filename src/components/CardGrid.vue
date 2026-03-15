@@ -3,10 +3,8 @@
     <div
       v-for="(item, index) in items"
       :key="index"
-      class="rounded-[18px] p-8 border"
-      :class="cardBg === 'secondary'
-        ? 'bg-neutral-100 dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 shadow-sm'
-        : 'bg-white dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800 shadow-sm'"
+      class="rounded-[18px] p-8"
+      :class="'bg-white dark:bg-apple-raised'"
     >
       <div class="flex justify-between items-center gap-3 mb-2 mr-2">
         <h3 class="text-[24px] font-semibold tracking-[-0.01em] flex-1 text-neutral-900 dark:text-neutral-100">{{ item.title }}</h3>
@@ -23,14 +21,14 @@
           </a>
         </div>
       </div>
-      <p v-if="item.subtitle" class="text-[17px] text-neutral-500 dark:text-neutral-400 mb-1 font-normal">{{ item.subtitle }}</p>
-      <p v-if="item.date" class="text-[14px] text-neutral-500 dark:text-neutral-500 mb-4">{{ item.date }}</p>
-      <p class="text-[17px] leading-normal text-neutral-500 dark:text-neutral-500 whitespace-pre-line">{{ item.description }}</p>
+      <p v-if="item.subtitle" class="text-[17px] text-neutral-900 dark:text-neutral-100 mb-1 font-normal">{{ item.subtitle }}</p>
+      <p v-if="item.date" class="text-[14px] text-neutral-900 dark:text-neutral-100 mb-4">{{ item.date }}</p>
+      <p class="text-[17px] leading-normal text-neutral-900 dark:text-neutral-100 whitespace-pre-line">{{ item.description }}</p>
       <div v-if="item.tags" class="flex flex-wrap gap-2 mt-4">
         <span
           v-for="tag in item.tags"
           :key="tag"
-          class="bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 px-3 py-1 rounded-xl text-[13px] font-normal"
+          class="bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-300 px-3 py-1 rounded-xl text-[13px] font-normal"
         >{{ tag }}</span>
       </div>
     </div>
