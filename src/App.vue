@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-white dark:bg-black min-h-screen">
     <NavBar
       :links="navLinks"
       :theme="theme"

@@ -1,7 +1,7 @@
 <template>
   <!-- Desktop / Mobile bar -->
-  <nav class="fixed top-0 w-full bg-white/80 dark:bg-neutral-900/80 backdrop-saturate-180 backdrop-blur-xl border-b border-neutral-200 dark:border-neutral-800 z-1000">
-    <div class="max-w-245 mx-auto px-5.5 h-11 flex items-center justify-between">
+  <nav class="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-saturate-180 backdrop-blur-xl border-b border-neutral-200 dark:border-white/10 z-1000">
+    <div class="max-w-245 mx-auto px-5.5 max-md:px-4 h-11 flex items-center justify-between">
 
       <!-- Desktop: nav links left -->
       <ul class="flex gap-8 list-none max-md:hidden">
@@ -26,23 +26,6 @@
 
       <!-- Right: social icons (desktop) + theme toggle + hamburger (mobile) -->
       <div class="flex items-center gap-4">
-
-        <!-- Social icons: desktop only -->
-        <div class="flex items-center gap-4 max-md:hidden">
-          <a href="https://github.com/EdwinASalcedo" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-            class="flex items-center opacity-80 hover:opacity-100 hover:-translate-y-0.5">
-            <img :src="githubIcon" alt="GitHub" width="20" height="20" class="dark:invert dark:brightness-125" />
-          </a>
-          <a href="https://www.linkedin.com/in/edwin-a-salcedo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-            class="flex items-center opacity-80 hover:opacity-100 hover:-translate-y-0.5">
-            <img :src="linkedinIcon" alt="LinkedIn" width="20" height="20" class="dark:invert dark:brightness-125" />
-          </a>
-          <a href="https://x.com/EdSauce_edo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
-            class="flex items-center opacity-80 hover:opacity-100 hover:-translate-y-0.5">
-            <img :src="xIcon" alt="X" width="20" height="20" class="dark:invert dark:brightness-125" />
-          </a>
-        </div>
-
         <!-- Theme toggle -->
         <button
           class="bg-transparent border-none text-neutral-900 dark:text-neutral-100 cursor-pointer text-xl opacity-80 hover:opacity-100 p-1"
